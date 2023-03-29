@@ -3,5 +3,5 @@
 
 
 class Square:
-"""Does nothing """
+    """ Does nothing """
     pass

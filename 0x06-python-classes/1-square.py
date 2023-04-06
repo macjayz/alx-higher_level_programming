@@ -5,4 +5,4 @@
 class Square:
     """ Define a constructor """
     def __init__(self, size):
-        self._size = size
+        self.my_square = size

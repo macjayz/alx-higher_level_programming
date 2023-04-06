@@ -3,5 +3,6 @@
 
 
 class Square:
-    """ Nothing here """
-    pass
+    """ Define a constructor """
+    def __init__(self, size):
+        self._size = size

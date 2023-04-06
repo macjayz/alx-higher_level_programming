@@ -4,5 +4,16 @@
 
 class Square:
     """ Define a constructor """
-    def __init__(self, size):
-        self._size = size
+    def __init__(self, size=0):
+        self._Square__size = size
+    """ Get size """
+    def get_size(self):
+        return self._Square__size
+    """ Set size """
+    def set_size(self):
+        if !isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self._Square__size = size

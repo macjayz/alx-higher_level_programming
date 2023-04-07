@@ -28,6 +28,7 @@ class Square:
         elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
     def my_print(self):
         """ This prints in stdout the square with the character #"""
         if self.__size == 0:

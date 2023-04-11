@@ -8,7 +8,5 @@ def lookup(obj):
     """
     attrs = []
     for attr in dir(obj):
-        # ignore private and special methods
-        if not attr.startswith('__'):
-            attrs.append(attr)
+        attrs.append(attr)
     return attrs

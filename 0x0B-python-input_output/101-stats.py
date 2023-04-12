@@ -10,6 +10,7 @@ def print_stats(size, status_codes):
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
 
+
 size = 0
 status_codes = {}
 valid_codes = ['200', '301', '400', '401', '403', '404', '405', '500']

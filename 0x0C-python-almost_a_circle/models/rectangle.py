@@ -77,7 +77,7 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
  - {self.__width}/{self.__height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ defines a varaible number of argument
 
         *args: this argument is used to pass multiple variables
@@ -86,6 +86,8 @@ class Rectangle(Base):
 	3rd argument should be the height attribute
 	4th argument should be the x attribute
 	5th argument should be the y attribute
+
+        **kwargs: assigns a key/value or keyword argument to attributes
         """
         if args and len(args) != 0:
             itr = 0
@@ -104,3 +106,19 @@ class Rectangle(Base):
                 elif itr == 4:
                     self.y = arg
                 itr += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for a, b in kwargs.items():
+                if a == "id":
+                    if b is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = b
+                elif a == "width":
+                    self.width = b
+                elif a == "height":
+                    self.height = b
+                elif a == "x":
+                    self.x = b
+                elif a == "y":
+                    self.y = b

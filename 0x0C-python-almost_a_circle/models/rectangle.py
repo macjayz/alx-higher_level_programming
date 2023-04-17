@@ -88,19 +88,19 @@ class Rectangle(Base):
 	5th argument should be the y attribute
         """
         if args and len(args) != 0:
-            a = 0
+            itr = 0
             for arg in args:
-                if a == 0:
+                if itr == 0:
                     if arg is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = arg
-                elif a == 1:
+                elif itr == 1:
                     self.width = arg
-                elif a == 2:
+                elif itr == 2:
                     self.height = arg
-                elif a == 3:
+                elif itr == 3:
                     self.x = arg
-                elif a == 4:
+                elif itr == 4:
                     self.y = arg
-                a += 1
+                itr += 1

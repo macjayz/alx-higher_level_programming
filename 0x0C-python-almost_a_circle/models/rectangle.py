@@ -16,22 +16,30 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width getter """
         return self.__width
 
     @property
     def height(self):
+        """ height getter """
         return self.__height
 
     @property
     def x(self):
+        """ x getter """
         return self.__x
 
     @property
     def y(self):
+        """ y getter """
         return self.__y
 
     @width.setter
     def width(self, value):
+        """ This sets width value
+        Args:
+            value (int): value to be set.
+        """
         if (type(value) is not int):
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -40,6 +48,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """ This sets height value
+        Args:
+            value (int): value to be set.
+        """
         if (type(value) is not int):
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -48,6 +60,10 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """ This sets value for x
+        Args:
+            value (int): value to be set.
+        """
         if (type(value) is not int):
             raise TypeError("x must be an integer")
         if value < 0:
@@ -56,6 +72,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """ This sets value for y
+        Args:
+            value (int): value to be set.
+        """
         if (type(value) is not int):
             raise TypeError("y must be an integer")
         if value < 0:
@@ -67,6 +87,7 @@ class Rectangle(Base):
         return (self.__width * self.__height)
 
     def display(self):
+        """ This prints # """
         [print("") for y in range(self.y)]
         for h in range(self.height):
             [print(" ", end="") for x in range(self.x)]
@@ -103,6 +124,9 @@ class Rectangle(Base):
             pass
 
     def to_dictionary(self):
+        """ this converts objects to dictionary
+        and returns a dictionary representation
+        """
         return {
             "id": self.id,
             "width": self.width,

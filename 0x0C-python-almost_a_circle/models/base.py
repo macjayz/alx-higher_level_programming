@@ -59,8 +59,8 @@ class Base:
             new.update(**dictionary)
             return new
 
+    @classmethod
     def load_from_file(cls):
-
         file_name = cls.__name__ + ".json"
         list_of_instances = []
         list_dictionaries = []

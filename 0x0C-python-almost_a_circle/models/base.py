@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """ This is the base class """
-
+import json
+import csv
+import os
+import turtle
 
 class Base:
     """ This is the base class """
@@ -32,10 +35,6 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON serialization of a list of objects to a file.
-        Args:
-            list_objs (list): A list of inherited Base instances.
-        """
         filename = cls.__name__ + ".json"
         with open(filename, "w") as jsonfile:
             if list_objs is None:

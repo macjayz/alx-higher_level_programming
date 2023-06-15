@@ -1,3 +1,2 @@
 #!/usr/bin/node
-const add = (a, b) => a + b;
-console.log(add(2, 3));
+exports.add = (a, b) => a + b;

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a script that Lists all City objects from 
+a script that Lists all City objects from
 the database hbtn_0e_101_usa
 """
 import sys
